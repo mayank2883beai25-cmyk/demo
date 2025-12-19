@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      background: linear-gradient(to right, #ffecd2, #fcb69f);
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      padding: 30px;
+      color: #333;
+      overflow-x: hidden;
+      position: relative;
+    }
+    h1 { font-size: 3em; color: #ff4081; margin-bottom: 20px; }
+    .message { font-size: 2em; margin: 20px auto; max-width: 600px; } 
+    .celebrate-btn {
+      margin-top: 40px;
+      padding: 15px 30px;
+      background-color: #ff4081;
+      color: white;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .emoji {
+      position: fixed;
+      top: -60px;
+      width: 40px;
+      height: 40px;
+      animation: fall linear forwards;
+      z-index: 100;
+      pointer-events: none;
+    }
+    @keyframes fall {
+      to { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday, Madam Ji! </h1>
+  <div class="message">
+    Happy Birthday, Jaana. Jab se tu meri life mein aayi hai it has been much better from the time when you were not here and i love it. You are the best thing that has ever happened to me this year. 
+    Sometimes when i feel low or not good you are always there for me and i hope you will be always in the coming years. You became my best friend not so fast not so late just at right time and i could share some of the wierd things i did with you and not felt embarassed you can say.
+    And everytime i missed you, i just see your pic for sometime and later i miss you more and its a bad habit of me ig. You became my world and everytime i see your smile, i feel that i am the luckiest person. Everytime i see in your eyes i just get mesmerized in it.
+    I'll always listen to your heart. I'll never stop caring, no matter what. I'll always choose you, every single day. I promise to stay with you always loving you, stand by you through every high and low, and to keep you happy always.
+    We do fight sometimes, get angry and even stop talking for a while. But no matter what, we always find our way back to each other because this bond means more than any fight ever could.
+    I got addicted to you somehow and you are the most hottest and dangerous addiction and this addiction i will never quit. When we meet i will give you alot of hugs and kisses and wanna cuddles with you 
+    Every moment with you feels like a small piece of our forever. we've laughed,dreamed together and this is just the beginning. No matter where life taks us, I'll always hold these memories close.
+    So today, on your birthday, i just want to thank you for being in my life, being here for me always,for loving me and for making like beautiful. You are my world, my love and i will love you more with each passing day 
+    Ig kaafi lamba hai yeh to ya if you read this whole call me and get your GIFT. I LOVE YOU MERI RASMALAI MUAHHHHHHHH
+    </div>
+<div class="footer">
+  From: <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" width="20" style="vertical-align:middle;"> 
+  Aapke Sir Ji 
+  <img src="https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg" width="20" style="vertical-align:middle;">
+</div>
+<button class="celebrate-btn" id="celebrateButton">Celebrate!</button>
+  <script>
+    const emojiUrls = [
+      "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f389.svg", // 🎉
+      "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f382.svg", // 🎂
+      "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f388.svg", // 🎈
+      "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/1f381.svg", // 🎁
+      "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2728.svg",   // ✨
+      "https://cdnjs.cloudflare.com/ajax/libs/twemoji/14.0.2/svg/2764.svg"    // ❤️
+    ];
+    function launchEmojiRain() {
+      for (let i = 0; i < 20; i++) {
+        const emoji = document.createElement('img');
+        emoji.src = emojiUrls[Math.floor(Math.random() * emojiUrls.length)];
+        emoji.classList.add('emoji');
+        emoji.style.left = Math.random() * 100 + 'vw';
+        emoji.style.animationDuration = (2 + Math.random() * 3) + 's';
+        document.body.appendChild(emoji);
+
+        setTimeout(() => emoji.remove(), 5000);
+      }
+    }
+    document.getElementById('celebrateButton').addEventListener('click', launchEmojiRain);
+    window.onload = launchEmojiRain;
+  </script>
+</body>
+</html>
